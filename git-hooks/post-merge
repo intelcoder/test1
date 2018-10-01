@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+#
+# This script runs after every pull and fetch/merge.
+#
+# It updates your config.json file with any new variables set in sample.config.json automatically.
+# It will use the values from the sample.config.json, so you will likely need to update it.
+# It will not overwrite any existing values you have already set.
+#
+
+import sys
+import json
+from collections import OrderedDict
+
+SAMPLE_FILE = 'config/sample.config.json'
+CONFIG_FILE = 'config/config.json'
+
+
+def loadFileData(path):
+    data = {}
+
+    try:
+        # Open example env
+        with open(path) as f:
+            data = json.load(f)
+
+    except IOError as e:
+        # Exit if file missing
+        print("Missing '"+path+"' file.")
+        sys.exit()
+
+    return data
+
+
+# Load sample and existing config file contents
+sample = loadFileData(SAMPLE_FILE)
+existing = loadFileData(CONFIG_FILE)
+
+# Show warning about missing values
+missing = []
+for key, value in existing.items():
+    if key not in sample:
+        missing.append(key)
+
+if len(missing) > 0:
+    print('\nWARNING: The following items are present in your "{0}"" but are missing from "{1}"\n'.format(CONFIG_FILE, SAMPLE_FILE))
+    for key in missing:
+        print('{0}'.format(key))
+    print('\nYou should update "{0}" with these missing items.\n'.format(SAMPLE_FILE))
+
+# Merge existing values into sample
+sample.update(existing)
+
+# Ordered the values alphabetically
+output = OrderedDict(sorted(sample.items(), key=lambda t: t[0]))
+
+# Write to config file file
+with open(CONFIG_FILE, 'w+') as f:
+    f.write(json.dumps(output, indent=2))

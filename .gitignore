@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+node_modules
+dist
+config/config.json
+package-lock.json
+.idea/
+/.eslintrc.js
+static/spritesheet.json
+spritesheet.json
+.vscode
+static/robots.txt
+sw.js

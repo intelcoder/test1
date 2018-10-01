@@ -1,0 +1,46 @@
+{
+  "name": "Property.ca",
+  "icons": [
+    {
+      "src": "/static/logos/property/property-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/logos/property/property-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#023448",
+  "theme_color": "#EA0649",
+  "short_name": "Property.ca",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Property.ca"
+}

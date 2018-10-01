@@ -1,0 +1,19 @@
+@value fonts: "@CSSVars/fonts.css";
+/* @value fonts: "./cssvars/mrloft/fonts.css"; */
+@value PRIMARY_FONT,SECONDARY_FONT from fonts;
+
+*{
+  font-family: SECONDARY_FONT;
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 1;
+  /* To avoid having lighter fonts on safari*/
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: PRIMARY_FONT;
+}
+p {
+  line-height: 1.5;
+}

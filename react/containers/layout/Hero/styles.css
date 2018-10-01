@@ -1,0 +1,80 @@
+@value colors: "@CSSVars/colors.css";
+/* @value colors: "../../../../config/styles/cssvars/mrloft/colors.css"; */
+@value SECONDARY_NORMAL_COLOR, GREY_NORMAL_COLOR, HERO_BG_COLOR from colors;
+
+.hero{
+  position: relative;
+  width: 100%;
+  background-color: HERO_BG_COLOR;
+}
+
+.heroBg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: GREY_NORMAL_COLOR;
+}
+
+.videoBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+
+  video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.bgImage{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+}
+
+
+.heroChildren{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+@media screen and (min-width: 63.9em) {
+  .heroChildren {
+    min-width: 600px;
+  }
+  .bgImage {
+    background-position-y: 80% !important;
+  }
+}
+
+@media screen and (max-width: 63.9em) {
+  .videoBg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47.9em) {
+  .hero {
+    min-height: 250px;
+
+  }
+  .heroChildren {
+    top: 40%;
+    width: 100%;
+  }
+}

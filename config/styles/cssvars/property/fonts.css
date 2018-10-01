@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@value PRIMARY_FONT: 'Roboto';
+@value SECONDARY_FONT: PRIMARY_FONT;
+
+@value HOME_HERO_TITLE_FONT: PRIMARY_FONT;

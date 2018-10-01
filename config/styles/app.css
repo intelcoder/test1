@@ -1,0 +1,73 @@
+@value colors: "@CSSVars/colors.css";
+@value THEME_BG_COLOR, SECONDARY_NORMAL_COLOR from colors;
+
+@value variables: "@CSSVars/variables.css";
+@value HEADER_HEIGHT from variables;
+
+:global {
+  @import './normalize.css';
+  @import './typography.css';
+  @import './slick.css';
+  @import './swiper.css';
+  @import './rctooltip.css';
+  @import './verticalTimeline.css';
+
+  *{
+    box-sizing: border-box;
+    outline: none;
+    touch-action: manipulation;
+  }
+
+  html,body{
+    background-color: THEME_BG_COLOR;
+    position: relative;
+  }
+  body.ReactModal__Body--open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+  @media screen {
+    html,body{
+        overflow-x: hidden;
+    }
+  }
+  main{
+    padding: HEADER_HEIGHT 0;
+    /* margin-top: 60px; */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /*To remove chrome yellow input background on autocomplete*/
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-text-fill-color: SECONDARY_NORMAL_COLOR !important;
+  }
+  
+  /*To align placeholder in input*/
+  input {
+    line-height: normal;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    pointer-events: visible;
+    padding: .5rem;
+  }
+
+  @media screen and (max-width: 47.9em) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+
+  }
+
+}
+

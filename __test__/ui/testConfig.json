@@ -1,0 +1,4 @@
+{
+  "baseUrl": "http://app.localhost:3333/",
+  "headless": true
+}

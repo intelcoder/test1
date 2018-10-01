@@ -1,0 +1,87 @@
+@value fonts: '@CSSVars/fonts.css';
+@value HOME_HERO_TITLE_FONT from fonts;
+.heroCopy {
+  text-align: center;
+}
+
+.title {
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 700px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 90px;
+  font-family: HOME_HERO_TITLE_FONT;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  svg {
+    width: 400px;
+    height: 80px;
+    margin-top: 4px;
+    display: inline;
+    vertical-align: top;
+    fill: white;
+    /*stroke: white;*/
+    stroke-width: 1.25px;
+    stroke-miterlimit: 10;
+    margin-right: 5px;
+  }
+}
+
+.searchField {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+}
+
+.titleSearchSpan {
+  color: inherit;
+  font-size: inherit;
+  line-height: 110px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.subtitle {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  span {
+    font-size: inherit;
+    color: inherit;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 47.9em) {
+  .searchField {
+    flex-wrap: wrap;
+  }
+  /*fuck*/
+  .title {
+    font-size: 50px !important;
+    max-width: initial;
+    padding: 0 0.3em;
+    margin-top: 2rem;
+    svg {
+      margin-top: 1px;
+      width: 250px;
+      height: 50px;
+    }
+  }
+  .titleSearchSpan {
+    line-height: 54px;
+  }
+  .subtitle {
+    font-size: 23px !important;
+  }
+  .searchField {
+    padding: 0 1rem;
+  }
+}

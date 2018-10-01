@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'SofiaProLight';
+    src: local('SofiaProLight');
+    src: url('/static/fonts/SofiaPro/sofia_pro_light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SofiaProMedium';
+    src: local('SofiaProMedium');
+    src: url('/static/fonts/SofiaPro/sofia_pro_medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNEXTPro';
+  src: local('DINNEXTPro');
+  src: url('/static/fonts/DINNEXTLTPro/DINNextLTPro-Condensed.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@value PRIMARY_FONT: 'SofiaProLight';
+@value SECONDARY_FONT: 'SofiaProMedium';
+
+@value HOME_HERO_TITLE_FONT: 'DINNEXTPro';
